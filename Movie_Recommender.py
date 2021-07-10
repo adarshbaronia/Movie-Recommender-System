@@ -1,5 +1,5 @@
 import nltk
-import contractions
+#import contractions
 nltk.download('punkt')
 nltk.download('stopwords')
 import pandas as pd
@@ -21,7 +21,7 @@ def normalize_document(doc):
     doc = re.sub(r'[^a-zA-Z0-9\s]', '', str(doc), re.I|re.A)
     doc = doc.lower()
     doc = doc.strip()
-    doc = contractions.fix(doc)
+#    doc = contractions.fix(doc)
     # tokenize document
     tokens = nltk.word_tokenize(doc)
     #filter stopwords out of document
