@@ -1,9 +1,8 @@
 import nltk
-#import contractions
-nltk.download('punkt')
+#nltk.download('punkt')
 nltk.download('stopwords')
 import pandas as pd
-df=pd.read_csv('https://github.com/dipanjanS/nlp_workshop_dhs18/raw/master/Unit%2010%20-%20Project%208%20-%20Movie%20Recommendations%20with%20Document%20Similarity/tmdb_5000_movies.csv.gz', compression='gzip')
+df=pd.read_csv('tmdb_5000_movies.csv')
 df.describe()
 
 df=df[['title','tagline','overview','popularity']]
@@ -21,7 +20,6 @@ def normalize_document(doc):
     doc = re.sub(r'[^a-zA-Z0-9\s]', '', str(doc), re.I|re.A)
     doc = doc.lower()
     doc = doc.strip()
-#    doc = contractions.fix(doc)
     # tokenize document
     tokens = nltk.word_tokenize(doc)
     #filter stopwords out of document
