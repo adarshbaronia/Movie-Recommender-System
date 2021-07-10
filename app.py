@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 #import requests
-import Movie_Recommender
+#import Movie_Recommender
 #from Movie_Recommender import doc_sim_df, movies_list
 import numpy as np
 
