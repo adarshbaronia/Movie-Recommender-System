@@ -7,7 +7,8 @@ import numpy as np
 
 import nltk
 #nltk.download('punkt')
-nltk.download('stopwords')
+from nltk.corpus import stopwords
+#nltk.download('stopwords')
 import pandas as pd
 df=pd.read_csv('tmdb_5000_movies.csv')
 df.describe()
