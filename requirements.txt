@@ -10,7 +10,6 @@ jsonify==0.5
 MarkupSafe==1.1.1
 nltk==3.5
 contractions==0.0.52
-re==2.2.1
 numpy==1.19.0
 requests==2.24.0
 scikit-learn==0.23.1
